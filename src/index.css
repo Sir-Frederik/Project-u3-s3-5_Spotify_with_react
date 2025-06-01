@@ -148,6 +148,20 @@ ul {
   width: 200px;
 }
 
+.star {
+  position: absolute;
+  right: 13px;
+  bottom: 10px;
+  color: rgb(255, 0, 0);
+  font-size: 23px;
+}
+
+.imgContainer {
+  max-width: 200px;
+  max-height: 200px;
+  margin-top: 0.5rem;
+}
+
 /* BOTTOM PLAYER SECTION*/
 
 .bg-container {

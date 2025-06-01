@@ -30,14 +30,14 @@ const MainPage = () => {
         <Row>
           <Col className="col-10">
             <div id="pop">
-              <Gallery title={"Rock Classics"} query={katy} />
+              <Gallery title={"Pop Culture"} query={katy} />
             </div>
           </Col>
         </Row>
         <Row>
           <Col className="col-10">
             <div id="hiphop" className="hipHopSection ">
-              <Gallery title={"Rock Classics"} query={eminem} />
+              <Gallery title={"#HipHop"} query={eminem} />
             </div>
           </Col>
         </Row>

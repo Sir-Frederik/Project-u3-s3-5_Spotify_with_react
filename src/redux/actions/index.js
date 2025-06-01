@@ -10,7 +10,7 @@ export const setEminemSongAction = (data) => ({ type: SET_EMINEM_SONGS, payload:
 export const selectAction = (data) => ({ type: SELECT_SONG, payload: data });
 
 export const fetchSongs = (artistName) => {
-  return async (dispatch, getState) => {
+  return async (dispatch) => {
     try {
       const resp = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=" + artistName);
 

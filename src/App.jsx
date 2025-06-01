@@ -1,19 +1,23 @@
 import { Container, Row } from "react-bootstrap";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import Sidebar from "./components/Sidebar";
 import Player from "./components/Player";
+import MainPage from "./components/MainPage";
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Container fluid>
-          <Row>
+      <Container fluid>
+        <Row>
+          <aside>
             <Sidebar />
-          </Row>
-          <Player />
-        </Container>
-      </BrowserRouter>
+          </aside>
+          <main>
+            <MainPage />
+          </main>
+        </Row>
+        <Player />
+      </Container>
     </>
   );
 }

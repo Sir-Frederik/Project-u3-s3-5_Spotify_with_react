@@ -1,23 +1,25 @@
 import { Container, Row } from "react-bootstrap";
-
 import Sidebar from "./components/Sidebar";
-import Player from "./components/Player";
 import MainPage from "./components/MainPage";
-import Gallery from "./components/Gallery";
+import Player from "./components/Player";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import FavouritesPage from "./components/FavouritesPage";
+
 function App() {
   return (
     <>
-      <Container fluid>
-        <Row>
-          <aside>
+      <BrowserRouter>
+        <Container fluid>
+          <Row>
             <Sidebar />
-          </aside>
-          <main>
-            <MainPage />
-          </main>
-        </Row>
-        <Player />
-      </Container>
+            <Routes>
+              <Route path="/" element={<MainPage />} />
+              <Route path="/favourites" element={<FavouritesPage />} />
+            </Routes>
+          </Row>
+          <Player />
+        </Container>
+      </BrowserRouter>
     </>
   );
 }

@@ -23,21 +23,21 @@ const MainPage = () => {
         <Row>
           <Col className="col-10">
             <div id="rock">
-              <Gallery title={"Rock Classics"} query={queen} />
+              <Gallery title={"Rock Classics"} query={"queen"} artistArr={queen} />
             </div>
           </Col>
         </Row>
         <Row>
           <Col className="col-10">
             <div id="pop">
-              <Gallery title={"Pop Culture"} query={katy} />
+              <Gallery title={"Pop Culture"} query={"katyperry"} artistArr={katy} />
             </div>
           </Col>
         </Row>
         <Row>
           <Col className="col-10">
             <div id="hiphop" className="hipHopSection ">
-              <Gallery title={"#HipHop"} query={eminem} />
+              <Gallery title={"#HipHop"} query={"eminem"} artistArr={eminem} />
             </div>
           </Col>
         </Row>

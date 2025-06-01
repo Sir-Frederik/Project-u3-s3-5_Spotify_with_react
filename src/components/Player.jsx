@@ -11,10 +11,21 @@ const Player = () => {
 
   return (
     <Container fluid className="fixed-bottom bg-container pt-1">
-      <Row className="h-100 flex-row">
-        <Col className="col-lg-10 offset-lg-2">
-          <Row className="h-100 flex-column justify-content-center align-items-center">
-            <Col className="col-6 col-md-4 playerControls">
+      <Row className={`h-100 ${selected && "justify-content-end"}`}>
+        <Col className={`col-lg-10 ${!selected && "offset-lg-2"}`}>
+          <Row className={`h-100 align-items-center ${selected ? "justify-content-start" : "justify-content-center"}`}>
+            {selected && (
+              <Col className="col-3 col-md-4 text-white offset-lg-1">
+                <div className="d-flex">
+                  <Image fluid src={selected.album.cover_small} />
+                  <div className="d-flex flex-column ms-2 d-none d-md-inline ">
+                    <p>{selected.title}</p>
+                    <p className="fst-italic">{selected.artist.name}</p>
+                  </div>
+                </div>
+              </Col>
+            )}
+            <Col className="col-9 col-md-4 playerControls">
               <div className="d-flex">
                 <a href="#">
                   <Image src={shuffle} alt="shuffle" />

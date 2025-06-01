@@ -1,14 +1,26 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 body {
   background: rgb(46, 63, 87);
   background: linear-gradient(90deg, rgb(63, 86, 119) 0%, rgba(33, 44, 61, 1) 42%, rgb(15, 21, 29) 100%);
 }
 
-/*SIDEBAR SECTION*/
-.navbar.fixed-left {
+/* SIDEBAR SECTION */
+
+.fixed-left {
   position: fixed;
   top: 0;
   left: 0;
-  /* right: 0; */
+  right: 0;
   bottom: 0;
   width: 230px;
   flex-flow: column nowrap;
@@ -17,22 +29,27 @@ body {
   z-index: 1200;
 }
 
-.navbar.fixed-left .navbar-collapse .navbar-nav a {
+.fixed-left .navbar-collapse .navbar-nav a {
   color: rgb(145, 145, 145) !important;
   transition: 0.3s;
 }
 
-.navbar.fixed-left .navbar-collapse .navbar-nav a:hover {
+.nav-item {
+  height: 52px;
+  margin-left: 4px;
+}
+
+.fixed-left .navbar-collapse .navbar-nav a:hover {
   color: white !important;
 }
 
-.navbar.fixed-left .navbar-brand {
+.fixed-left .navbar-brand {
   padding-top: 20px;
   padding-bottom: 30px;
   padding-left: 10px;
 }
 
-.sidebar ul {
+ul {
   list-style-type: none;
   padding-left: 3px;
 }
@@ -47,7 +64,7 @@ body {
   text-decoration: none;
 }
 
-.nav-link i {
+.icons {
   font-size: 1.5em;
 }
 
@@ -83,46 +100,6 @@ body {
 @media screen and (max-width: 936px) {
   #sidebar {
     display: none;
-  }
-}
-
-/* BOTTOM PLAYER SECTION*/
-
-.bg-container {
-  height: 5.5rem;
-  background-color: #282828;
-}
-
-.playerControls div {
-  justify-content: space-between;
-}
-
-.playerControls div:first-of-type {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.playerControls a img {
-  width: 14px;
-  margin-top: 1rem;
-  filter: brightness(60%);
-}
-
-.playerControls a:hover {
-  filter: brightness(80%);
-  color: #282828 !important;
-}
-
-.progress {
-  color: white;
-  background-color: #414141;
-  height: 3px;
-}
-
-@media screen and (min-width: 1200px) {
-  .playerControls div:first-of-type {
-    margin-left: 25%;
-    margin-right: 25%;
   }
 }
 
@@ -163,10 +140,50 @@ body {
   padding-top: 50px;
 }
 
-#hipHopSection {
+.hipHopSection {
   margin-bottom: 7rem;
 }
 
 .mainPage img {
   width: 200px;
+}
+
+/* BOTTOM PLAYER SECTION*/
+
+.bg-container {
+  height: 5.5rem;
+  background-color: #282828;
+}
+
+.playerControls div {
+  justify-content: space-between;
+}
+
+.playerControls div:first-of-type {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.playerControls a img {
+  width: 14px;
+  margin-top: 1rem;
+  filter: brightness(60%);
+}
+
+.playerControls a:hover {
+  filter: brightness(80%);
+  color: #282828 !important;
+}
+
+.progress {
+  color: white;
+  background-color: #414141;
+  height: 3px;
+}
+
+@media screen and (min-width: 1200px) {
+  .playerControls div:first-of-type {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
 }

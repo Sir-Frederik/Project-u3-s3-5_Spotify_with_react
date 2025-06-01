@@ -1,9 +1,9 @@
 import { Container, Row } from "react-bootstrap";
-import "./App.css";
 
 import Sidebar from "./components/Sidebar";
 import Player from "./components/Player";
 import MainPage from "./components/MainPage";
+import Gallery from "./components/Gallery";
 function App() {
   return (
     <>

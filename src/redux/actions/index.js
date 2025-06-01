@@ -9,48 +9,21 @@ export const setEminemSongAction = (data) => ({ type: SET_EMINEM_SONGS, payload:
 
 export const selectAction = (data) => ({ type: SELECT_SONG, payload: data });
 
-export const fetchQueenSongs = (artistName) => {
+export const fetchSongs = (artistName) => {
   return async (dispatch, getState) => {
     try {
       const resp = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=" + artistName);
 
       if (resp.ok) {
         let { data } = await resp.json();
-        dispatch(setQueenSongAction(data));
-      } else {
-        throw new Error("Error in fetching songs");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-};
-
-export const fetchKatySongs = (artistName) => {
-  return async (dispatch, getState) => {
-    try {
-      const resp = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=" + artistName);
-
-      if (resp.ok) {
-        let { data } = await resp.json();
-        dispatch(setKatySongAction(data));
-      } else {
-        throw new Error("Error in fetching songs");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-};
-
-export const fetchEminemSongs = (artistName) => {
-  return async (dispatch, getState) => {
-    try {
-      const resp = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=" + artistName);
-
-      if (resp.ok) {
-        let { data } = await resp.json();
-        dispatch(setEminemSongAction(data));
+        const songs = data.slice(0, 4);
+        if (artistName === "queen") {
+          dispatch(setQueenSongAction(songs));
+        } else if (artistName === "katyperry") {
+          dispatch(setKatySongAction(songs));
+        } else if (artistName === "eminem") {
+          dispatch(setEminemSongAction(songs));
+        }
       } else {
         throw new Error("Error in fetching songs");
       }

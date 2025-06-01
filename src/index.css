@@ -125,9 +125,9 @@ ul {
 }
 
 .imgLinks a p,
-.mainPage p {
+.Song-Title {
   padding-top: 8px;
-  font-size: 12px;
+  font-size: 14px;
   color: white;
   font-weight: 700;
 }

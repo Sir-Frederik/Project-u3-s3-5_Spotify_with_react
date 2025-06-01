@@ -1,6 +1,7 @@
 import { Col, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import MainCard from "./MainCard"; // importa MainCard
+import MainCard from "./MainCard";
+import MainHeader from "./MainHeader";
 
 const FavouritesPage = () => {
   const favSongs = useSelector((state) => state.favourites.content);
@@ -22,23 +23,13 @@ const FavouritesPage = () => {
   return (
     <Col className="col-12 col-md-9 offset-md-3 mainPage">
       <Row>
-        <Col className="col-9 col-lg-11 mainLinks d-none d-md-flex">
-          <a href="#">TRENDING</a>
-          <a href="#">PODCAST</a>
-          <a href="#">MOODS AND GENRES</a>
-          <a href="#">NEW RELEASES</a>
-          <a href="#">DISCOVER</a>
+        <Col>
+          <MainHeader />
         </Col>
       </Row>
       <Row className="mt-5 hipHopSection">
         {favSongs.map((song) => (
-          <MainCard
-            key={song.id}
-            song={song}
-            isFavourite={true} // sono tutte favorite in questa pagina
-            onToggleFavourite={onToggleFavourite}
-            onSelectSong={onSelectSong}
-          />
+          <MainCard key={song.id} song={song} isFavourite={true} onToggleFavourite={onToggleFavourite} onSelectSong={onSelectSong} />
         ))}
       </Row>
     </Col>

@@ -40,8 +40,12 @@ const Sidebar = () => {
             </Navbar.Collapse>
           </Container>
           <div className="nav-btn">
-            <Button className="signup-btn">Sign Up</Button>
-            <Button className="login-btn">Login</Button>
+            <Button className="signup-btn" variant="light">
+              Sign Up
+            </Button>
+            <Button className="login-btn" variant="light">
+              Login
+            </Button>
             <a href="#"> Cookie Policy</a> |<a href="#"> Privacy</a>
           </div>
         </Navbar>

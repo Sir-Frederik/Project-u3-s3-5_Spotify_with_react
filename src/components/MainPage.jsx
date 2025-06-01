@@ -2,6 +2,8 @@ import { Col, Image, Row } from "react-bootstrap";
 import { useSelector } from "react-redux";
 
 import Gallery from "../components/Gallery";
+import MainCard from "./MainCard";
+import MainHeader from "./MainHeader";
 
 const MainPage = () => {
   const queen = useSelector((state) => state.defaultSongs.content.queenSongs);
@@ -12,12 +14,8 @@ const MainPage = () => {
     <>
       <Col className="col-12 col-md-9 offset-md-3 mainPage">
         <Row>
-          <Col className="col-9 col-lg-11 mainLinks d-none d-md-flex">
-            <a href="#">TRENDING</a>
-            <a href="#">PODCAST</a>
-            <a href="#">MOODS AND GENRES</a>
-            <a href="#">NEW RELEASES</a>
-            <a href="#">DISCOVER</a>
+          <Col>
+            <MainHeader />
           </Col>
         </Row>
         <Row>

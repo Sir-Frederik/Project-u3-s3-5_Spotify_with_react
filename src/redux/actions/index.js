@@ -1,9 +1,11 @@
 export const SET_QUEEN_SONGS = "SET_QUEEN_SONGS";
 export const SET_KATY_SONGS = "SET_KATY_SONGS";
 export const SET_EMINEM_SONGS = "SET_EMINEM_SONGS";
+export const SET_ZECCHINO_SONGS = "SET_ZECCHINO_SONGS";
 export const SELECT_SONG = "SELECT_SONG";
 
 export const setQueenSongAction = (data) => ({ type: SET_QUEEN_SONGS, payload: data });
+export const setZecchinoSongAction = (data) => ({ type: SET_ZECCHINO_SONGS, payload: data });
 export const setKatySongAction = (data) => ({ type: SET_KATY_SONGS, payload: data });
 export const setEminemSongAction = (data) => ({ type: SET_EMINEM_SONGS, payload: data });
 
@@ -19,6 +21,8 @@ export const fetchSongs = (artistName) => {
         const songs = data.slice(0, 4);
         if (artistName === "queen") {
           dispatch(setQueenSongAction(songs));
+        } else if (artistName === "zecchinodoro") {
+          dispatch(setZecchinoSongAction(songs));
         } else if (artistName === "katyperry") {
           dispatch(setKatySongAction(songs));
         } else if (artistName === "eminem") {

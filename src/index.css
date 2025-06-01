@@ -161,6 +161,9 @@ ul {
   max-height: 200px;
   margin-top: 0.5rem;
 }
+.MainHeader {
+  background-color: #000000;
+}
 
 /* BOTTOM PLAYER SECTION*/
 

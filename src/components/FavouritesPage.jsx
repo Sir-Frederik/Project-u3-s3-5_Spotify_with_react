@@ -21,18 +21,16 @@ const FavouritesPage = () => {
   };
 
   return (
-    <Col className="col-12 col-md-9 offset-md-3 mainPage">
-      <Row>
-        <Col>
-          <MainHeader />
-        </Col>
-      </Row>
-      <Row className="mt-5 hipHopSection">
-        {favSongs.map((song) => (
-          <MainCard key={song.id} song={song} isFavourite={true} onToggleFavourite={onToggleFavourite} onSelectSong={onSelectSong} />
-        ))}
-      </Row>
-    </Col>
+    <>
+      <MainHeader />
+      <Col className="col-12 col-md-9 offset-md-3 mainPage">
+        <Row className="mt-5 hipHopSection">
+          {favSongs.map((song) => (
+            <MainCard key={song.id} song={song} isFavourite={true} onToggleFavourite={onToggleFavourite} onSelectSong={onSelectSong} />
+          ))}
+        </Row>
+      </Col>
+    </>
   );
 };
 

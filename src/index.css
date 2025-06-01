@@ -134,13 +134,14 @@ ul {
 
 #rock,
 #pop,
-#hiphop {
+#hiphop,
+#baby {
   color: white;
   font-weight: 700;
   padding-top: 50px;
 }
 
-.hipHopSection {
+#baby {
   margin-bottom: 7rem;
 }
 

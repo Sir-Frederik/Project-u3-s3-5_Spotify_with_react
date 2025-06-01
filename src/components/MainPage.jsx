@@ -30,7 +30,7 @@ const MainPage = () => {
         </Row>
         <Row>
           <Col className="col-10">
-            <div id="hiphop" className="hipHopSection ">
+            <div id="hiphop">
               <Gallery title={"#HipHop"} query={"eminem"} artistArr={eminem} />
             </div>
           </Col>
@@ -38,7 +38,7 @@ const MainPage = () => {
 
         <Row>
           <Col className="col-10">
-            <div id="hiphop" className="hipHopSection ">
+            <div id="baby">
               <Gallery title={"Music for children"} query={"queen"} artistArr={queen} />
             </div>
           </Col>

@@ -13,7 +13,7 @@ const MainPage = () => {
   return (
     <>
       <MainHeader />
-      <Col className="col-12 col-md-9 offset-md-3 mainPage">
+      <Col className="col-12 col-md-9 offset-md-2 mainPage">
         <Row>
           <Col className="col-10">
             <div id="rock">

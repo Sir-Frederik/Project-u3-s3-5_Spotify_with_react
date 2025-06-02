@@ -6,7 +6,6 @@ const MainHeader = ({ children }) => {
       <Row>
         <Col className="col-12 col-md-9 offset-md-3">
           {" "}
-          {/* Sposta offset e col qui */}
           <Row>
             <Col className="col-9 col-lg-11 mainLinks d-none d-md-flex">
               <a href="#">TRENDING</a>
